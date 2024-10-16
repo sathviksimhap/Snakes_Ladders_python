@@ -10,11 +10,7 @@ Board.bgpic("board.PNG")
 
 player = Pin(0)
 
-i = 0
-while True:
-    time.sleep(.5)
-    player.goto(Positions[i])
-    i += 1
+
 
 
 
