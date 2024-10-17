@@ -9,7 +9,7 @@ Board.bgpic("board.PNG")
 player = Pin()
 
 Board.listen()
-Board.onkey(player.move, "a")
+Board.onkey(player.roll, "a")
 
 
 
