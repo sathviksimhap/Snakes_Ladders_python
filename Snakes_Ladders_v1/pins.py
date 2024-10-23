@@ -4,10 +4,11 @@ import time
 from mydata import POSITIONS, SNAKES, LADDERS
 
 class Pin(Turtle):
-    def __init__(self):
+    def __init__(self, color):
         super().__init__()
         self.pos = 0
         self.shape("triangle")
+        self.color(color)
         self.up()
         self.setheading(90)
         self.goto(-275, -240)
@@ -39,4 +40,4 @@ class Pin(Turtle):
                 self.winner()
 
     def winner(self):
-        self.write("Winner")
+        pass
