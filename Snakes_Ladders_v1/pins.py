@@ -26,9 +26,17 @@ class Pin(Turtle):
         elif self.pos in LADDERS.keys():
             self.goto(POSITIONS[LADDERS[self.pos]])
             self.pos = LADDERS[self.pos]
+            if self.pos == 100:
+                self.winner()
 
     def move(self, goal):
-        while self.pos != goal:
-            self.pos += 1
-            self.goto(POSITIONS[self.pos])
-            time.sleep(0.2)
+        if goal <= 100:
+            while self.pos != goal:
+                self.pos += 1
+                self.goto(POSITIONS[self.pos])
+                time.sleep(0.2)
+            if self.pos == 100:
+                self.winner()
+
+    def winner(self):
+        self.write("Winner")
