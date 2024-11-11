@@ -40,4 +40,4 @@ class Pin(Turtle):
                 self.winner()
 
     def winner(self):
-        pass
+        print("I Win\nGame Over!")
